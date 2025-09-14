@@ -6,16 +6,13 @@
   <title>J&L Paving, Excavating & Trucking | Charleston WV</title>
   <link rel="icon" type="image/png" href="assets/icons/favicon.png">
   <link rel="shortcut icon" href="assets/icons/favicon.ico">
+  <link rel="stylesheet" href="assets/css/style.css">
   <meta name="description" content="J&L Paving, Excavating & Trucking offers professional paving, excavating and trucking services in Charleston, WV and surrounding areas. Call (304) 539-3149 for a free estimate.">
   <meta property="og:title" content="J&L Paving, Excavating & Trucking">
   <meta property="og:description" content="Professional paving, excavating & trucking services in Charleston, WV. Free quotes!">
   <meta property="og:image" content="assets/images/hero.jpg">
   <meta property="og:url" content="https://jlpavingwv.com/">
   <meta name="twitter:card" content="summary_large_image">
-
-  <!-- Bootstrap CSS for carousel -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
   <!-- Structured data for SEO -->
   <script type="application/ld+json">
   {
@@ -35,7 +32,56 @@
     "areaServed": "Charleston, WV and surrounding areas"
   }
   </script>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* Hero with Ken Burns animation */
+    .hero {
+      position: relative;
+      height: 80vh;
+      overflow: hidden;
+    }
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      animation: kenburns 20s ease-in-out infinite;
+    }
+    @keyframes kenburns {
+      0%   { transform: scale(1) translate(0, 0); }
+      50%  { transform: scale(1.1) translate(-10px, -10px); }
+      100% { transform: scale(1) translate(0, 0); }
+    }
+    .hero .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.4);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+    .hero .overlay h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .hero .overlay p {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 5px;
+      text-decoration: none;
+      color: #fff;
+    }
+    .btn-primary { background: #d9534f; }
+    .btn-secondary { background: #5bc0de; }
+  </style>
 </head>
 <body>
   <!-- Navigation -->
@@ -50,28 +96,10 @@
     </div>
   </nav>
 
-  <!-- Hero Section with Carousel -->
+  <!-- Hero Section with Ken Burns animation -->
   <header class="hero">
-    <div id="pavingCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="assets/images/hero.jpg" class="d-block w-100" alt="Asphalt paving Charleston WV">
-        </div>
-        <div class="carousel-item">
-          <img src="assets/images/109076003_733786294064175_6877898834608841159_n.jpg" class="d-block w-100" alt="Driveway paving Charleston WV">
-        </div>
-        <div class="carousel-item">
-          <img src="assets/images/110301342_733786354064169_815007763370855060_n.jpg" class="d-block w-100" alt="Parking lot paving Charleston WV">
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#pavingCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#pavingCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </button>
-    </div>
-    <div class="content text-center mt-3">
+    <img src="assets/images/hero.jpg" alt="Charleston WV paving project">
+    <div class="overlay">
       <h1>J&L Paving, Excavating & Trucking</h1>
       <p>Paving the way in Charleston, WV & beyond</p>
       <div class="buttons">
@@ -91,17 +119,17 @@
     <h2>Our Services</h2>
     <div class="grid">
       <div class="service-card">
-        <span class="icon">🛣️</span>
+        <span class="icon" role="img" aria-label="Paving">🛣️</span>
         <h3>Paving</h3>
         <p>Driveways, parking lots, resurfacing & sealcoating – serving Charleston WV and nearby areas.</p>
       </div>
       <div class="service-card">
-        <span class="icon">🚜</span>
+        <span class="icon" role="img" aria-label="Excavating">🚜</span>
         <h3>Excavating</h3>
         <p>Site preparation, grading, drainage and more for residential & commercial clients.</p>
       </div>
       <div class="service-card">
-        <span class="icon">🚛</span>
+        <span class="icon" role="img" aria-label="Trucking">🚛</span>
         <h3>Trucking</h3>
         <p>Hauling gravel, asphalt, fill dirt & debris. Reliable transport across Kanawha Valley.</p>
       </div>
@@ -166,7 +194,6 @@
   <a href="tel:+13045393149" class="call-button">📞 Call Now</a>
 
   <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
