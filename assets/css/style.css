@@ -313,3 +313,15 @@ section {
     width: 100%;
   }
 }
+/* --- Mobile Responsive Fixes --- */
+.hero .overlay, .hero .content {text-align:center;padding:20px;}
+.hero h1 {font-size:2rem;}
+.hero p {font-size:1rem;}
+.gallery .grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px;}
+@media (max-width:768px){.navbar{flex-direction:column;align-items:center;}.nav-links{display:flex;flex-direction:column;gap:10px;}}
+footer p {font-size:.9rem;text-align:center;line-height:1.4;padding:10px;}
+.hero{position:relative;color:#fff;}
+.hero::after{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.4);}
+.hero .content{position:relative;z-index:1;}
+/* --- End Mobile Fixes --- */
+
