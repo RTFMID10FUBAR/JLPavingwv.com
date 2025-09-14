@@ -1,42 +1,33 @@
 #!/usr/bin/env python3
-
 import os
 from urllib.parse import urljoin
-from datetime import datetime
+from datetime import datetime, timezone
 
-# CONFIG — change these as needed
-SITE_DIR = "site_org"
-BASE_URL = "https://jlpavingwv.com/"   # <-- your live domain, with trailing slash
+# CONFIG — always use repo root
+SITE_DIR = os.path.dirname(__file__)
+BASE_URL = "https://jlpavingwv.com/"   # your live domain, trailing slash
 SITEMAP_FILE = os.path.join(SITE_DIR, "sitemap.xml")
 
 def get_html_files(root):
     html_files = []
-    for dirpath, _, filenames in os.walk(root):
-        for fname in filenames:
-            if fname.lower().endswith(".html"):
-                # skip sitemap itself if re-run
-                if fname.lower() == "sitemap.xml":
-                    continue
-                fullpath = os.path.join(dirpath, fname)
-                # compute URL path
-                rel_path = os.path.relpath(fullpath, root)
-                html_files.append(rel_path.replace(os.path.sep, "/"))
+    for fname in os.listdir(root):
+        if fname.lower().endswith(".html") and fname.lower() != "sitemap.xml":
+            html_files.append(fname)
     return html_files
 
 def generate_sitemap():
     html_files = get_html_files(SITE_DIR)
-    now_iso = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+    now_iso = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
     lines = []
     lines.append('<?xml version="1.0" encoding="UTF-8"?>')
     lines.append('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">')
     
-    for rel in sorted(html_files):
-        # handle index.html at root
-        if rel == "index.html":
+    for fname in sorted(html_files):
+        if fname == "index.html":
             url = BASE_URL
         else:
-            url = urljoin(BASE_URL, rel)
+            url = urljoin(BASE_URL, fname)
         lines.append("  <url>")
         lines.append(f"    <loc>{url}</loc>")
         lines.append(f"    <lastmod>{now_iso}</lastmod>")
