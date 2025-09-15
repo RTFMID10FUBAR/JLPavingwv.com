@@ -22,49 +22,12 @@
 
   <!-- Hero Carousel -->
   <header class="hero-carousel">
-<div class="carousel">
-  <div class="carousel-item active"><img src="assets/images/hero/hero-bobcat.jpg" alt="hero bobcat"></div>
-  <div class="carousel-item"><img src="assets/images/hero/hero-dozer.jpg" alt="hero dozer"></div>
-  <div class="carousel-item"><img src="assets/images/hero/hero-paving.jpg" alt="hero paving"></div>
-  <div class="carousel-item"><img src="assets/images/hero/hero-sign.jpg" alt="hero sign"></div>
-  <div class="carousel-item"><img src="assets/images/hero/hero-sign2.jpg" alt="hero sign2"></div>
-  <div class="carousel-item"><img src="assets/images/hero/hero-truck.jpg" alt="hero truck"></div>
-  <div class="carousel-item"><img src="assets/images/hero/hero.jpg" alt="hero"></div>
-</div>
-<div class="carousel">
-  <div class="carousel-item active"><img src="assets/images/hero/hero-bobcat.jpg" alt="hero bobcat"></div>
-  <div class="carousel-item"><img src="assets/images/hero/hero-dozer.jpg" alt="hero dozer"></div>
-  <div class="carousel-item"><img src="assets/images/hero/hero-paving.jpg" alt="hero paving"></div>
-  <div class="carousel-item"><img src="assets/images/hero/hero-sign.jpg" alt="hero sign"></div>
-  <div class="carousel-item"><img src="assets/images/hero/hero-sign2.jpg" alt="hero sign2"></div>
-  <div class="carousel-item"><img src="assets/images/hero/hero-truck.jpg" alt="hero truck"></div>
-  <div class="carousel-item"><img src="assets/images/hero/hero.jpg" alt="hero"></div>
-</div>
-<div class="carousel">
-  <div class="carousel-item active"><img src="assets/images/hero/hero-bobcat.jpg" alt="hero bobcat"></div>
-  <div class="carousel-item"><img src="assets/images/hero/hero-dozer.jpg" alt="hero dozer"></div>
-  <div class="carousel-item"><img src="assets/images/hero/hero-paving.jpg" alt="hero paving"></div>
-  <div class="carousel-item"><img src="assets/images/hero/hero-sign.jpg" alt="hero sign"></div>
-  <div class="carousel-item"><img src="assets/images/hero/hero-sign2.jpg" alt="hero sign2"></div>
-  <div class="carousel-item"><img src="assets/images/hero/hero-truck.jpg" alt="hero truck"></div>
-  <div class="carousel-item"><img src="assets/images/hero/hero.jpg" alt="hero"></div>
-</div>
-<div class="carousel">
-  <div class="carousel-item active"><img src="assets/images/hero/hero-bobcat.jpg" alt="hero bobcat"></div>
-  <div class="carousel-item"><img src="assets/images/hero/hero-dozer.jpg" alt="hero dozer"></div>
-  <div class="carousel-item"><img src="assets/images/hero/hero-paving.jpg" alt="hero paving"></div>
-  <div class="carousel-item"><img src="assets/images/hero/hero-sign.jpg" alt="hero sign"></div>
-  <div class="carousel-item"><img src="assets/images/hero/hero-sign2.jpg" alt="hero sign2"></div>
-  <div class="carousel-item"><img src="assets/images/hero/hero-truck.jpg" alt="hero truck"></div>
-  <div class="carousel-item"><img src="assets/images/hero/hero.jpg" alt="hero"></div>
-</div>
-      <div class="carousel-item">
-        <img src="assets/images/hero/hero2.jpg" alt="Excavation project in Charleston WV">
-      </div>
-      <div class="carousel-item">
-        <img src="assets/images/hero/hero3.jpg" alt="Trucking and hauling in Kanawha County WV">
-      </div>
-      <!-- Add more hero images in /assets/images/hero/ -->
+    <div class="carousel">
+      <div class="carousel-item active"><img src="assets/images/hero/hero-bobcat.jpg" alt="Bobcat paving work"></div>
+      <div class="carousel-item"><img src="assets/images/hero/hero-dozer.jpg" alt="Dozer excavation"></div>
+      <div class="carousel-item"><img src="assets/images/hero/hero-paving.jpg" alt="Asphalt paving"></div>
+      <div class="carousel-item"><img src="assets/images/hero/hero-sign.jpg" alt="JL Paving sign"></div>
+      <div class="carousel-item"><img src="assets/images/hero/hero-truck.jpg" alt="Hauling truck service"></div>
     </div>
     <div class="carousel-overlay">
       <h1>J&L Paving, Excavating & Trucking</h1>
@@ -81,7 +44,7 @@
     <p>🚧 Fall Special: 10% Off Residential Driveways</p>
   </section>
 
-  <!-- Services Preview -->
+  <!-- Services -->
   <section class="services-preview">
     <h2>Our Services</h2>
     <div class="grid">
@@ -128,12 +91,23 @@
   <!-- Carousel Script -->
   <script>
     let slides = document.querySelectorAll('.carousel-item');
-    let current = 0;
+    let current = Math.floor(Math.random() * slides.length); // random start
+    let counter = 0;
+    slides[current].classList.add('active');
+
     setInterval(() => {
       slides[current].classList.remove('active');
-      current = (current + 1) % slides.length;
+      counter++;
+
+      if (counter % 3 === 0) {
+        current = Math.floor(Math.random() * slides.length); // random jump every 3rd
+      } else {
+        current = (current + 1) % slides.length;
+      }
+
       slides[current].classList.add('active');
     }, 5000); // 5 seconds per slide
   </script>
 </body>
 </html>
+
