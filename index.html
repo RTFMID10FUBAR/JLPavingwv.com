@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JL Paving, Excavating & Trucking | Clendenin & Charleston WV</title>
   <link rel="stylesheet" href="assets/css/style.css">
-  <meta name="description" content="JL Paving — 35+ years serving Clendenin, Charleston, Kanawha, Roane, Jackson, Putnam & Summersville WV. Driveways, parking lots, excavation & hauling. Call (304) 539-3149.">
-  <link rel="preload" as="image" href="assets/images/hero/hero-truck.jpg">
+  <meta name="description" content="JL Paving — 35+ years serving Clendenin, Charleston, Kanawha, Roane, Jackson, Putnam & Summersville WV. Asphalt paving, excavation, trucking & hauling. Call (304) 539-3149.">
 </head>
 <body>
+  <!-- Navbar -->
   <nav class="navbar">
     <div class="logo">JL Paving</div>
     <div class="nav-links">
-      <a href="index.html">Home</a>
+      <a href="index.html" class="active">Home</a>
       <a href="services.html">Services</a>
       <a href="about.html">About</a>
       <a href="gallery.html">Gallery</a>
@@ -20,9 +20,21 @@
     </div>
   </nav>
 
-  <header class="hero animated-hero">
-    <div class="overlay"></div>
-    <div class="content">
+  <!-- Hero Carousel -->
+  <header class="hero-carousel">
+    <div class="carousel">
+      <div class="carousel-item active">
+        <img src="assets/images/hero/hero1.jpg" alt="Asphalt paving project in Clendenin WV">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/images/hero/hero2.jpg" alt="Excavation project in Charleston WV">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/images/hero/hero3.jpg" alt="Trucking and hauling in Kanawha County WV">
+      </div>
+      <!-- Add more hero images in /assets/images/hero/ -->
+    </div>
+    <div class="carousel-overlay">
       <h1>J&L Paving, Excavating & Trucking</h1>
       <p>Trusted across Central WV for over 35 years</p>
       <div class="buttons">
@@ -32,29 +44,32 @@
     </div>
   </header>
 
+  <!-- Promo -->
   <section class="promo">
     <p>🚧 Fall Special: 10% Off Residential Driveways</p>
   </section>
 
+  <!-- Services Preview -->
   <section class="services-preview">
     <h2>Our Services</h2>
     <div class="grid">
       <div class="service-card">
         <h3>Paving</h3>
-        <p>Driveways & parking lots built with quality asphalt and lasting workmanship.</p>
+        <p>Driveways & parking lots built with quality asphalt and workmanship that lasts.</p>
       </div>
       <div class="service-card">
         <h3>Excavating</h3>
-        <p>From land clearing to drainage, we prep your site right the first time.</p>
+        <p>Land clearing, grading & drainage prep for homes, businesses & new construction.</p>
       </div>
       <div class="service-card">
         <h3>Trucking & Hauling</h3>
-        <p>Gravel, asphalt, dirt & debris — delivered or hauled away quickly.</p>
+        <p>Gravel, asphalt, dirt & debris — delivered or hauled away fast.</p>
       </div>
     </div>
     <a href="services.html" class="btn btn-secondary">See All Services</a>
   </section>
 
+  <!-- Testimonials -->
   <section class="testimonials">
     <h2>What Our Customers Say</h2>
     <div class="testimonial-grid">
@@ -73,8 +88,20 @@
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>📍 JL Paving — Serving Clendenin, Charleston, Kanawha, Roane, Jackson, Putnam & Summersville WV • Call (304) 539-3149</p>
   </footer>
+
+  <!-- Carousel Script -->
+  <script>
+    let slides = document.querySelectorAll('.carousel-item');
+    let current = 0;
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 5000); // 5 seconds per slide
+  </script>
 </body>
 </html>
