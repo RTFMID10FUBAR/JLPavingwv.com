@@ -115,21 +115,43 @@ blockquote p { font-style: italic; margin-bottom: 10px; }
 cite { font-size: 0.9rem; color: #666; }
 
 /* Gallery */
-.gallery { padding: 40px 20px; }
-.gallery h2 { margin-bottom: 20px; text-align: center; }
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
+.gallery {
+    padding: 40px 20px;
+    background: #fff;
 }
-.gallery-grid figure { margin: 0; text-align: center; }
-.gallery-grid img {
-  width: 100%; border-radius: 6px; cursor: pointer;
-  transition: transform 0.3s;
-}
-.gallery-grid img:hover { transform: scale(1.05); }
-.gallery-grid figcaption { margin-top: 6px; font-size: 0.85rem; color: #444; }
 
+.gallery h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.gallery-grid figure {
+    margin: 0;
+    background: #fafafa;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 200px; /* consistent height */
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-grid figcaption {
+    padding: 8px;
+    font-size: 0.9rem;
+    text-align: center;
+    color: #444;
+}
 /* Contact */
 form input, form textarea, form button {
   width: 100%; padding: 12px; margin: 8px 0;
