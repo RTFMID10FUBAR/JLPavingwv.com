@@ -1,15 +1,20 @@
-<!DOCTYPE html> <html lang="en"> <head>
-  <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>J&L Paving, Excavating & 
-  Trucking</title> <link rel="stylesheet" href="assets/css/style.css"> <!-- Font Awesome for icons --> <link rel="stylesheet" 
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
-  integrity="sha512-papozN+fZuyYw5LVGJgopFf2exlLpoEVxe9jOPK1b7AeuvyBWnAtbIvzmYqgTh/VOyJ2Id0b3f1N6AGkEyf9vA==" 
-  crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head> <body>
-  <!-- Hero Carousel --> <header class="hero-carousel">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>J&L Paving, Excavating & Trucking</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-papozN+fZuyYw5LVGJgopFf2exlLpoEVxe9jOPK1b7AeuvyBWnAtbIvzmYqgTh/VOyJ2Id0b3f1N6AGkEyf9vA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <!-- Hero Carousel -->
+  <header class="hero-carousel">
     <div class="carousel">
-      <div class="carousel-item active"><img src="assets/images/hero/hero-bobcat.jpg" alt="Bobcat Excavating"></div> <div 
-      class="carousel-item"><img src="assets/images/hero/hero-paving.jpg" alt="Asphalt Paving"></div> <div 
-      class="carousel-item"><img src="assets/images/hero/hero-truck.jpg" alt="Dump Truck Hauling"></div>
+      <div class="carousel-item active"><img src="assets/images/hero/hero-bobcat.jpg" alt="Bobcat Excavating"></div>
+      <div class="carousel-item"><img src="assets/images/hero/hero-paving.jpg" alt="Asphalt Paving"></div>
+      <div class="carousel-item"><img src="assets/images/hero/hero-truck.jpg" alt="Dump Truck Hauling"></div>
       <div class="carousel-item"><img src="assets/images/hero/hero-dozer.jpg" alt="Dozer Work"></div>
     </div>
     <div class="carousel-overlay">
@@ -21,11 +26,6 @@
       </div>
     </div>
   </header>
-
-  <!-- Promo -->
-  <section class="promo">
-    <p>🚧 Fall Special: <strong>10% Off Residential Driveways</strong></p>
-  </section>
 
   <!-- Services -->
   <section class="services-preview">
@@ -65,15 +65,10 @@
       <blockquote>“The parking lot at my shop in Nitro has never looked better. Smooth and clean!” <cite>– Dave K., Kanawha County WV</cite></blockquote>
       <blockquote>“Grading on my property in Spencer was done perfectly — couldn’t be happier.” <cite>– Mike R., Roane County WV</cite></blockquote>
       <blockquote>“Fair pricing and fast service — they paved our church lot in Ripley.” <cite>– Linda P., Jackson County WV</cite></blockquote>
-      <blockquote>“Professional crew, reliable equipment, and quality work.” <cite>– Karen T., Hurricane WV</cite></blockquote>
       <blockquote>“They cleared and prepped my new home site flawlessly.” <cite>– Greg S., Putnam County WV</cite></blockquote>
-      <blockquote>“Paved our business lot in Summersville ahead of schedule.” <cite>– Tom B., Nicholas County WV</cite></blockquote>
       <blockquote>“Best paving contractor we’ve hired in 20 years.” <cite>– Mark D., Charleston WV</cite></blockquote>
       <blockquote>“The hauling crew was efficient and left everything clean.” <cite>– Brenda W., Winfield WV</cite></blockquote>
       <blockquote>“Driveway is perfect — water finally drains correctly!” <cite>– Jeff H., Elkview WV</cite></blockquote>
-      <blockquote>“Quick response and thorough work. They care about the details.” <cite>– Paula G., Clendenin WV</cite></blockquote>
-      <blockquote>“The asphalt quality is outstanding — smooth and durable.” <cite>– Robert T., St. Albans WV</cite></blockquote>
-      <blockquote>“Showed up on time, did the job right, and stood behind their work.” <cite>– Angela C., Ripley WV</cite></blockquote>
     </div>
   </section>
 
@@ -85,7 +80,7 @@
 
   <!-- JS -->
   <script>
-    // Carousel
+    // Hero carousel
     let slides = document.querySelectorAll('.carousel-item');
     let current = Math.floor(Math.random() * slides.length);
     slides[current].classList.add('active');
@@ -95,7 +90,7 @@
       slides[current].classList.add('active');
     }, 5000);
 
-    // Testimonial slider
+    // Testimonials slider
     let testimonials = document.querySelectorAll('.testimonial-slider blockquote');
     let tIndex = 0;
     testimonials[tIndex].classList.add('active');
