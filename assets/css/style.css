@@ -28,3 +28,4 @@ footer a{color:#e63946;}
 .map-section{background:#1a1a1a;padding:2em;text-align:center}.map-section h2{color:#e63946;margin-bottom:.5em}.map-section p{margin-bottom:1em}
 .map-section{background:#1a1a1a;padding:2em;text-align:center}.map-section h2{color:#e63946;margin-bottom:.5em}.map-section p{margin-bottom:1em}
 .social-links{text-align:center;margin:1em 0}.social-links a{color:#f0f0f0;margin:0 .5em;font-size:1.2em;text-decoration:none}.social-links a:hover{color:#e63946}
+.social-bar{position:fixed;bottom:0;left:0;width:100%;background:#111;text-align:center;padding:.5em 0;border-top:2px solid #e63946;z-index:1000}.social-bar a{color:#f0f0f0;margin:0 1em;font-size:1.3em;text-decoration:none}.social-bar a:hover{color:#e63946}
