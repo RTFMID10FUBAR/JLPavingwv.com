@@ -15,7 +15,7 @@ export async function onRequestPost(context) {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        personalizations: [{ to: [{ email: "jlpavingorg@gmail.com" }] }],
+        personalizations: [{ to: [{ email: "jlpaving.org@gmail.com" }] }],
         from: { email: "no-reply@jlpavingwv.com" },
         subject: "New Contact Form Submission",
         content: [
