@@ -1,15 +1,18 @@
-<!DOCTYPE html> <html lang="en"> <head>
-  <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>J&L Paving, Excavating & 
-  Trucking</title> <link rel="stylesheet" href="assets/css/style.css"> <!-- Font Awesome for icons --> <link rel="stylesheet" 
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
-  integrity="sha512-papozN+fZuyYw5LVGJgopFf2exlLpoEVxe9jOPK1b7AeuvyBWnAtbIvzmYqgTh/VOyJ2Id0b3f1N6AGkEyf9vA==" 
-  crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head> <body>
-  <!-- Hero Carousel --> <header class="hero-carousel">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>J&L Paving, Excavating & Trucking</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- Hero Carousel -->
+  <header class="hero-carousel">
     <div class="carousel">
-      <div class="carousel-item active"><img src="assets/images/hero/hero-bobcat.jpg" alt="Bobcat Excavating"></div> <div 
-      class="carousel-item"><img src="assets/images/hero/hero-paving.jpg" alt="Asphalt Paving"></div> <div 
-      class="carousel-item"><img src="assets/images/hero/hero-truck.jpg" alt="Dump Truck Hauling"></div>
+      <div class="carousel-item active"><img src="assets/images/hero/hero-bobcat.jpg" alt="Bobcat Excavating"></div>
+      <div class="carousel-item"><img src="assets/images/hero/hero-paving.jpg" alt="Asphalt Paving"></div>
+      <div class="carousel-item"><img src="assets/images/hero/hero-truck.jpg" alt="Dump Truck Hauling"></div>
       <div class="carousel-item"><img src="assets/images/hero/hero-dozer.jpg" alt="Dozer Work"></div>
     </div>
     <div class="carousel-overlay">
@@ -32,22 +35,17 @@
     <h2>Our Services</h2>
     <div class="services-grid">
       <div class="service-card">
-        <i class="fa-solid fa-road"></i>
+        <img src="assets/icons/paving.svg" alt="Paving icon">
         <h3>Paving</h3>
         <p>Asphalt driveways, parking lots & resurfacing built to last for homes and businesses.</p>
       </div>
       <div class="service-card">
-        <i class="fa-solid fa-mountain"></i>
+        <img src="assets/icons/excavating.svg" alt="Excavating icon">
         <h3>Excavating</h3>
         <p>Grading, drainage, site prep & land clearing — strong foundations start here.</p>
       </div>
       <div class="service-card">
-        <i class="fa-solid fa-tractor"></i>
-        <h3>Dozer Services</h3>
-        <p>Tree hauling, woods clearing, path building, conservation cleanup, and more.</p>
-      </div>
-      <div class="service-card">
-        <i class="fa-solid fa-truck"></i>
+        <img src="assets/icons/trucking.svg" alt="Trucking icon">
         <h3>Trucking & Hauling</h3>
         <p>Gravel, asphalt, dirt & debris delivered or hauled away fast across Central WV.</p>
       </div>
@@ -95,7 +93,7 @@
       slides[current].classList.add('active');
     }, 5000);
 
-    // Testimonial slider
+    // Testimonial slider (auto-scroll)
     let testimonials = document.querySelectorAll('.testimonial-slider blockquote');
     let tIndex = 0;
     testimonials[tIndex].classList.add('active');
